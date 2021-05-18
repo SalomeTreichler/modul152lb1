@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>m152-26-ap18a Web UI</title>
+    <link rel="shortcut icon" href="https://kubernetes.io/images/favicon.png">
+    <meta charset="utf-8" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+<h1>Website mit Video- und Audio-Inhalt erstellen</h1>
+<h2>Video Formate</h2>
+<h3>MP4 Format</h3>
+<video width="320" height="240" controls>
+    <source src="../data/tbzbasment_vid.mp4" type="video/mp4">
+</video>
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Funktioniert mit vielen verschiedenen Videospielern (z.B. iTunes, VLC, Windows Media Player, GOM Player)</li>
+    <li>Untertitel Formate können einfach integriert werden</li>
+    <li>Kann über das Internet gestreamt werden, ohne das zu viel der Qualität verloren geht</li>
+    <li>Kompatibel mit den meisten modernen Technologien</li>
+    <li>Unterstützt 3D Objekte</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Nicht optimal zu editieren</li>
+</ul>
+<br>
+<h3>OGG Format</h3>
+<video width="320" height="240" controls>
+    <source src="../data/tbzbasement_vid.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Patentfrei</li>
+    <li>Funktioniert bei vielen Videospielern</li>
+    <li>Unterstützt von den meisten Browsern</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Nur teilweise unterstützt von Safari und Internet Explorer</li>
+</ul>
+<br>
+<h3>WEBM Format</h3>
+<video width="320" height="240" controls>
+    <source src="../data/tbzbasement_vid.webm" type="video/webm">
+    Your browser does not support the video tag.
+</video>
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Hohe Videoqualität</li>
+    <li>Gratis und von allen verwendbar</li>
+    <li>Unterstützt von beliebten Webseiten (YouTube, Vimeo, etc.)</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Nur limitiert verfügbar auf Browsern und Videospielern</li>
+    <li>Nicht abspielbar auf den meisten Mobilgeräten</li>
+</ul>
+<br>
+
+<h2>Bild Formate</h2>
+<h3>JPEG Format</h3>
+<img src="../data/graphity.JPEG" alt="Graphity JPEG" width="10%" height="10%">
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Vielseitig einsetzbar</li>
+    <li>kleine Dateigrössen durch Komprimierung möglich</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Qualitätsverlust bei zu starker oder mehrmaliger Komprimierung</li>
+    <li>keine Transparenz oder Sonderfarben möglich</li>
+</ul>
+<br>
+<h3>GIF Format</h3>
+<img src="../data/graphity.gif" alt="Graphity GIF" width="10%" height="10%">
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>geringe Dateigröße (durch Reduzierung auf maximal 256 Farben)</li>
+    <li>transparente Hintergründe möglich</li>
+    <li>animierte Bildsequenzen sind möglich (Animated GIF)</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>maximal 256 Farben möglich (Farbverläufe werden deshalb oft stufig dargestellt)</li>
+</ul>
+<br>
+<h3>PNG Format</h3>
+<img src="../data/graphity.png" alt="Graphity PNG" width="10%" height="10%">
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>minimaler Kompressionsverlust. Die Bildqualität ändert sich durch keine Kompressionsrate</li>
+    <li>das Format ist passend für die Speicherung von dazwischenliegenden Versionen des Bildes. Wenn Sie ein Bild erneut speichern, dann geht die Qualität nicht verloren</li>
+    <li>PNG unterstützt eine große Anzahl an Farben. PNG-8 (256 Farben) und PNG-24 (ungefähr 16,7 Millionen Farben)</li>
+    <li>es unterstützt eine vielschichtige Transparenz. Das Bild hat 256 Opazitätsstufen, von ganz undurchsichtig bis vollständig durchsichtig</li>
+    <li>es ist möglich mit Schichten zu arbeiten</li>
+    <li>die Fähigkeit die Datei zu den Metadaten hinzuzufügen</li>
+    <li>kleine Dateigrößen</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>es unterstützt keine Animation</li>
+    <li>unpassend für die Arbeit mit vollfarbigen Bildern</li>
+    <li>kann nicht mehrere Bilder in einer Datei speichern</li>
+</ul>
+<br>
+
+<h2>Audio Formate</h2>
+<h3>MP3 Format</h3>
+<audio controls>
+    <source src="../data/tbzbasement.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Praktisch zu verteilen und einfach erhältlich über das Internet</li>
+    <li>Kann eine Qualität von bis zu 320 Kbps erreichen</li>
+    <li>Patentfrei</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Urheberrechte lassen sich nicht in das Format einbauen </li>
+    <li>Im Vergleich zu CDs gibt es einen leichten Qualitätsverlust oder falsche Metadaten über das Audio</li>
+</ul>
+<br>
+<h3>OGG Format</h3>
+<audio controls>
+    <source src="../data/tbzbasement.ogg" type="audio/ogg">
+    Your browser does not support the audio tag.
+</audio>
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Patentfrei</li>
+    <li>Sehr gutes und flexibles Tagging System</li>
+    <li>Sehr gute Qualität (kann um einiges besser sein als mp3)</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Nicht alle Audiospieler können ogg Audio abspielen</li>
+    <li>Batterieverbrauch bei Audiospielern ist höher bei ogg Audios</li>
+</ul>
+<br>
+<h3>M4A Format</h3>
+<audio controls>
+    <source src="../data/tbzbasement.m4a" type="audio/mpeg">
+    Your browser does not support the audio tag.
+</audio>
+<h5><b>Vorteile:</b></h5>
+<ul>
+    <li>Komprimierbar ohne Qualitätsverlust</li>
+    <li>Sehr flexibel beim editieren und transferieren</li>
+</ul>
+<br>
+<h5><b>Nachteile:</b></h5>
+<ul>
+    <li>Keine gute Kompatibilität mit Geräten die nicht von Apple sind</li>
+</ul>
+<br>
+</body>
+</html>
