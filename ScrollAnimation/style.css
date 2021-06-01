@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 600px;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    padding-top: 75px;
+    background: #ccc;
+    text-align: center;
+    color: #FFF;
+    font-size: 16px;
+}
+
+/* Animations */
+[data-aos=example-anim1] {
+    transform: skewX(45deg);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+[data-aos=example-anim1].aos-animate {
+    transform: skewX(0);
+    opacity: 1;
+}
+
+[data-aos=example-anim2] {
+    background: red;
+    transition-property: background;
+}
+[data-aos=example-anim2].aos-animate {
+    background: green;
+}
+
+[data-aos=example-anim3] {
+    transform: rotate(360deg);
+    opacity: 0;
+    transition-property: transform, opacity;
+}
+[data-aos=example-anim3].aos-animate {
+    transform: rotate(0);
+    opacity: 1;
+}
+
+/*# sourceMappingURL=scrollAnimation.css.map */
