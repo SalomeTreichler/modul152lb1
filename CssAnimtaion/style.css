@@ -1,6 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 body {
-    padding: 50px;
+    font-family: Open Sans;
+    font-size: 50px;
+    padding: 30px;
+    color: #222;
+    background-color: lightblue;
 }
+
+/*flipping card*/
+
+label {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+.card div {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    text-align: center;
+    line-height: 200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+.card .back {
+    background: #222;
+    color: #FFF;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+label:hover .card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
+
+/*rainbow spinning box*/
 
 .box {
     background-color: purple;
@@ -12,40 +88,6 @@ body {
     -o-animation: rainbow 3s infinite;
     animation: rainbow 3s infinite;
     animation-direction: alternate;
-}
-
-.dancing-box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: relative;
-    animation: dance 5s linear infinite alternate;
-}
-
-/*example for same div as dancing-box, but without shorthand animation property
-div {
-  animation-name: example;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}*/
-
-@keyframes dance {
-    0%   {background-color:deeppink; left:0px; top:0px;}
-    5%  {transform: rotate(0);}
-    10%  {transform: rotate(360deg);}
-    25%  {background-color: gold; left:200px; top:0px;}
-    30%  {transform: rotate(0);}
-    35%  {transform: rotate(360deg);}
-    50%  {background-color:deepskyblue; left:200px; top:200px;}
-    55%  {transform: rotate(0);}
-    60%  {transform: rotate(360deg);}
-    75%  {background-color:purple; left:0px; top:200px;}
-    80%  {transform: rotate(0);}
-    85%  {transform: rotate(360deg);}
-    100% {background-color:deeppink; left:0px; top:0px;}
 }
 
 @-webkit-keyframes rainbow {
@@ -138,4 +180,40 @@ div {
         background-color: blue;
         transform: rotate(360deg);
     }
+}
+
+
+/*Dancing box*/
+.dancing-box {
+    width: 100px;
+    height: 100px;
+    background-color: deeppink;
+    position: relative;
+    animation: dance 5s linear infinite alternate;
+}
+
+/*example for same div as dancing-box, but without shorthand animation property
+div {
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}*/
+
+@keyframes dance {
+    0%   {background-color:deeppink; left:0px; top:0px;}
+    5%  {transform: rotate(0);}
+    10%  {transform: rotate(360deg);}
+    25%  {background-color: gold; left:200px; top:0px;}
+    30%  {transform: rotate(0);}
+    35%  {transform: rotate(360deg);}
+    50%  {background-color:deepskyblue; left:200px; top:200px;}
+    55%  {transform: rotate(0);}
+    60%  {transform: rotate(360deg);}
+    75%  {background-color:purple; left:0px; top:200px;}
+    80%  {transform: rotate(0);}
+    85%  {transform: rotate(360deg);}
+    100% {background-color:deeppink; left:0px; top:0px;}
 }
