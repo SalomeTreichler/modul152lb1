@@ -1,0 +1,12 @@
+body, canvas {
+    background-color: #FEFEDF;
+    margin: 0;
+    padding: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}

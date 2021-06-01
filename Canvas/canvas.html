@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="init();">
+<canvas id="canvas" width="500" height="500"></canvas>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script>
+    //Link to library: https://www.createjs.com/getting-started/easeljs
+    var stage;
+    var SIZE = 50;
+
+    function init() {
+        var canvas = document.getElementsByTagName('canvas')[0];
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        stage = new createjs.Stage("canvas");
+
+        addCircle(canvas.width/2 - (SIZE * 2.5), canvas.height/2, SIZE, "#FFC75F");
+        addStar(canvas.width/2, canvas.height/2, SIZE, "#FF6F91");
+        addRoundedSquare(canvas.width/2 + (SIZE * 2.5), canvas.height/2, SIZE * 2, 5, "#845EC2");
+
+        stage.update();
+    }
+
+    function addCircle(x, y, r, fill) {
+        var circle = new createjs.Shape();
+        circle.graphics.beginFill(fill).drawCircle(0, 0, r);
+        circle.x = x;
+        circle.y = y;
+        circle.name = "circle";
+        circle.on("pressmove",drag);
+        stage.addChild(circle);
+    }
+
+    function addStar(x, y, r, fill) {
+        var star = new createjs.Shape();
+        star.graphics.beginFill(fill).drawPolyStar(0, 0, r, 5, 0.6, -90);
+        star.x = x;
+        star.y = y;
+        star.name = "star";
+        star.on("pressmove",drag);
+        stage.addChild(star);
+    }
+
+    function addRoundedSquare(x, y, s, r, fill) {
+        var square = new createjs.Shape();
+        square.graphics.beginFill(fill).drawRoundRect(0, 0, s, s, r);
+        square.x = x - s/2;
+        square.y = y - s/2;
+        square.name = "square";
+        square.on("pressmove",drag);
+        stage.addChild(square);
+    }
+
+    function drag(evt) {
+        if(evt.target.name == "square") {
+            evt.target.x = evt.stageX - SIZE;
+            evt.target.y = evt.stageY - SIZE;
+        }
+        else  {
+            evt.target.x = evt.stageX;
+            evt.target.y = evt.stageY;
+        }
+
+        stage.update();
+    }
+</script>
+</body>
